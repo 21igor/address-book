@@ -35,7 +35,7 @@ function resetFields() {
 $(document).ready(function() {
 
   $("#add-address").click(function() {
-    $("#new-addresses").append('<br><div class="new-address">' +
+    $("#new-addresses").append('<br><div class="new-address hideAfter">' +
                                   '<div class="form-group">' +
                                    '<label for="new-street">Street</label>' +
                                    '<input type="text" class="form-control new-street">' +
@@ -66,6 +66,7 @@ $(document).ready(function() {
     var inputtedLastName = $("input#new-last-name").val();
     var newContact = new Contact(inputtedFirstName, inputtedLastName);
 
+    $(".hideAfter").hide();
     $(".new-address").each(function() {
 
       var inputtedStreet = $(this).find("input.new-street").val();
